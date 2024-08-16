@@ -2,7 +2,7 @@ import React from 'react';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
-const clientId = "681667204808-3oi01jc425li2pjov3k8vufsaiknrg1b.apps.googleusercontent.com";
+// const clientId = "681667204808-3oi01jc425li2pjov3k8vufsaiknrg1b.apps.googleusercontent.com";
 const backendUrl = "http://127.0.0.1:8000";
 
 const GoogleButton = () => {
