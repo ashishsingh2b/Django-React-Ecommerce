@@ -38,8 +38,8 @@ AUTHENTICATION_BACKENDS = (
     # 'social_core.backends.google.GoogleOpenIdConnect',
 )
 
-# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '681667204808-3oi01jc425li2pjov3k8vufsaiknrg1b.apps.googleusercontent.com'
-# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
 SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['profile', 'email']
 
 REST_FRAMEWORK = {

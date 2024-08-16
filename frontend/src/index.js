@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 // Replace 'your-client-id' with your actual Google Client ID
-const clientId = '681667204808-3oi01jc425li2pjov3k8vufsaiknrg1b.apps.googleusercontent.com';
+const clientId = '';
 
 ReactDOM.render(
   <Provider store={store}>

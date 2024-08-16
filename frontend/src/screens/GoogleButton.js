@@ -2,7 +2,7 @@ import React from 'react';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
-// const clientId = "681667204808-3oi01jc425li2pjov3k8vufsaiknrg1b.apps.googleusercontent.com";
+const clientId = "";
 const backendUrl = "http://127.0.0.1:8000";
 
 const GoogleButton = () => {
@@ -31,13 +31,43 @@ const GoogleButton = () => {
   };
 
   return (
-    <GoogleOAuthProvider clientId={clientId}>
-      <GoogleLogin
-        onSuccess={handleSuccess}
-        onError={handleError}
-      />
-    </GoogleOAuthProvider>
+    <div style={styles.container}>
+      <GoogleOAuthProvider clientId={clientId}>
+        <GoogleLogin
+          onSuccess={handleSuccess}
+          onError={handleError}
+          style={styles.button}
+          logo="google"
+        />
+      </GoogleOAuthProvider>
+    </div>
   );
+};
+
+// Internal CSS
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh', // Full viewport height
+    backgroundColor: '#f5f5f5', // Light background color
+    padding: '20px',
+  },
+  button: {
+    width: '100%',
+    maxWidth: '400px',
+    padding: '10px',
+    borderRadius: '5px',
+    fontSize: '16px',
+    textAlign: 'center',
+    color: 'white',
+    backgroundColor: '#4285F4', // Google blue
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Light shadow for better visibility
+    transition: 'background-color 0.3s ease', // Smooth transition for hover effect
+  },
 };
 
 export default GoogleButton;
