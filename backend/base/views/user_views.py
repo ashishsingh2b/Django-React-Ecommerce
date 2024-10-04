@@ -16,19 +16,19 @@ from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views import View
 import json
-from google.oauth2 import id_token
-from google.auth.transport import requests
+# from google.oauth2 import id_token
+# from google.auth.transport import requests
 
 from django.http import JsonResponse
 from django.views import View
 import json
-from google.oauth2 import id_token
-from google.auth.transport import requests
+# from google.oauth2 import id_token
+# from google.auth.transport import requests
 
 from django.http import JsonResponse
 from rest_framework.views import APIView
-from google.oauth2 import id_token
-from google.auth.transport import requests
+# from google.oauth2 import id_token
+# from google.auth.transport import requests
 from rest_framework import status
 
 import json

@@ -50,7 +50,7 @@ export const login = (email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            '/api/users/login/',
+            'http://127.0.0.1:8000/api/users/login/',
             { 'username': email, 'password': password },
             config
         )
@@ -95,7 +95,7 @@ export const register = (name, email, password) => async (dispatch) => {
         }
 
         const { data } = await axios.post(
-            '/api/users/register/',
+            'http://127.0.0.1:8000/api/users/register/',
             { 'name': name, 'email': email, 'password': password },
             config
         )

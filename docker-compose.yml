@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./backend  # Path to your Django project
+    ports:
+      - "8000:8000"        # Expose port 8000 for the backend
+    volumes:
+      - ./backend:/app                 # Mount the backend directory
+      - ./backend/db.sqlite3:/app/db.sqlite3  # Persist SQLite database file
+
+  frontend:
+    build:
+      context: ./frontend  # Path to your React project
+    ports:
+      - "3000:80"          # Expose port 80 for the frontend
+    volumes:
+      - ./frontend:/app    # Mount the frontend directory for live reloading
+    environment:
+      - NODE_ENV=production  # Optional: Set NODE_ENV for production
